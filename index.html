@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVELIA — Created by Muhammad Taqi</title>
+<meta name="description" content="AVELIA - Created by Muhammad Taqi. Visit the website to explore.">
+<!-- Aapka Icon / Favicon -->
+<link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt8OAzLeR4wS5ll-h2KN-9fkLZKvOqwFgELTXv94qL9A&s=10">
+
+<style>
+  /* ============ BASE STYLES ============ */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: #06060c;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ============ ANIMATED BACKGROUND GLOWS ============ */
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+    animation: float 10s ease-in-out infinite alternate;
+  }
+  .glow.g1 { width: 400px; height: 400px; background: #7c3aed; top: -100px; left: -100px; }
+  .glow.g2 { width: 350px; height: 350px; background: #06b6d4; bottom: -100px; right: -100px; animation-delay: -5s; }
+
+  @keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, 40px) scale(1.1); }
+  }
+
+  /* ============ MAIN CARD ============ */
+  .card {
+    position: relative;
+    z-index: 1;
+    background: rgba(16, 16, 31, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 50px 40px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============ LOGO & TEXT ============ */
+  .logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid rgba(124, 58, 237, 0.5);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #ffffff, #a78bfa, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .creator {
+    font-size: 0.85rem;
+    color: #9a9ab5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 35px;
+  }
+
+  /* ============ BUTTONS ============ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #7c3aed, #06b6d4);
+    background-size: 200% auto;
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+  }
+
+  .btn:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(6, 182, 212, 0.5);
+  }
+
+  .btn-google {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #9a9ab5;
+    text-decoration: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .btn-google:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 480px) {
+    .card { padding: 40px 25px; }
+    h1 { font-size: 2rem; }
+    .logo { width: 75px; height: 75px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Background Glows -->
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+
+  <!-- Main Content -->
+  <div class="card">
+    <!-- Logo -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt8OAzLeR4wS5ll-h2KN-9fkLZKvOqwFgELTXv94qL9A&s=10" alt="AVELIA Logo" class="logo">
+    
+    <!-- Name & Creator -->
+    <h1>AVELIA</h1>
+    <p class="creator">Created by Muhammad Taqi</p>
+    
+    <!-- Visit Website Button -->
+    <a href="https://www.google.com/search?q=site:avelia.oneapp.dev" target="_blank" rel="noopener" class="btn-google">
+      🚀 Visit Website
+    </a>
+
+  
+  </div>
+
+</body>
+</html>
